@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href = "index.html"><img src = "Images/Logo 2.png"></a>
+            <a href = "index.html" class ="Company">Online Voting System</a>
+            <div class ="nav-links" id ="navLinks">
+                <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onClick="showMenu()"></i>
+            
+
+        </nav>
+        <div class="Home">
+            <div class="text-box1">
+                <div class="signin-signup">
+                    <form action="#" class="sign-in-form">
+                    <h2 class="title">Login</h2>  
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id ="Aadhar" placeholder="Aadhar Number" ">
+                    </div>  
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input id="Mob_Num" placeholder="Mobile Number">
+                    </div>
+                    <input type="submit" id="gen_otp" class="btn solid" value="Generate OTP" onclick="phonenumber()">
+                    <a href="Login_.html" id="Crediantials" >Login With Username/Password</a>
+                    </form>
+                </div>
+
+                <div class="center">
+                        <canvas id="captcha">captcha text</canvas>
+                        <input id="textBox" type="text" name="text">
+                        <div id="buttons">
+                            <button id="refreshButton" type="submit">Refresh</button>
+                        </div>
+                        <span id="output"></span>
+                </div>
+                </div>
+                <script src="script.js"></script>
+            </div>
+        </div>
+        
+    </section>
+
+    <script type="text/javascript">
+        function AadharValidate() {
+          var aadhar = document.getElementById("Aadhar").value;
+          var adharcardTwelveDigit = /^\d{12}$/;
+          var adharSixteenDigit = /^\d{16}$/;
+          if (aadhar != '') {
+            if (aadhar.match(adharcardTwelveDigit)) {
+              return true;
+            }
+            else if (aadhar.match(adharSixteenDigit)) {
+              return true;
+            }
+            else {
+              alert("Enter valid Aadhar Number");
+              return false;
+            }
+          }
+        }
+      </script>
+
+</body>
+</html>
