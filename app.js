@@ -25,14 +25,13 @@ function phonenumber(Mobile)
         return false;
         }
 }
-
 let captchaText = document.querySelector('#captcha');
 var ctx = captchaText.getContext("2d");
 ctx.font = "30px Roboto";
 ctx.fillStyle = "#08e5ff";
 
 let userText = document.querySelector('#textBox');
-let gen_otp = document.querySelector('#gen_otp');
+let submitButton = document.querySelector('#submitButton');
 let output = document.querySelector('#output');
 let refreshButton = document.querySelector('#refreshButton');
 
@@ -65,7 +64,7 @@ userText.addEventListener('keyup', function(e) {
 // This event listener is stimulated whenever the user clicks the "Submit" button
 // "Correct!" or "Incorrect, please try again" message is
 // displayed after validating the input text with CAPTCHA
-gen_otp.addEventListener('click', function() {
+submitButton.addEventListener('click', function() {
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
         output.innerHTML = "Correct!";

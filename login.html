@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Voting System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
 </head>
@@ -18,6 +18,7 @@
                 <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
+                    <li><a href="Admin_Login.html">ADMIN LOGIN</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onClick="showMenu()"></i>
@@ -25,33 +26,42 @@
 
         </nav>
         <div class="Home">
-            <div class="text-box1">
+            <div class="text-box">
                 <div class="signin-signup">
                     <form action="#" class="sign-in-form">
-                    <h2 class="title">Login</h2>  
+                        <i class="fa-solid fa-circle-user"></i>
+                    <h2 class="title">Voter</h2>  
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" id ="Aadhar" placeholder="Aadhar Number" ">
                     </div>  
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input id="Mob_Num" placeholder="Mobile Number">
+                        <input id="Captcha" placeholder="Enter CAPTCHA">
+                        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"> Hello
+                        </canvas>
                     </div>
+                    
                     <input type="submit" id="gen_otp" class="btn solid" value="Generate OTP" onclick="phonenumber()">
-                    <a href="Login_.html" id="Crediantials" >Login With Username/Password</a>
+                    
                     </form>
                 </div>
-
-                <div class="center">
+                <!-- <div class="center">
+                    <h1 id="captchaHeading">
+                        Captcha Validator Using HTML, CSS and JavaScript
+                    </h1>
+                    <div id="captchaBackground">
                         <canvas id="captcha">captcha text</canvas>
                         <input id="textBox" type="text" name="text">
                         <div id="buttons">
+                            <input id="submitButton" type="submit">
                             <button id="refreshButton" type="submit">Refresh</button>
                         </div>
                         <span id="output"></span>
-                </div>
-                </div>
-                <script src="script.js"></script>
+                    </div>
+                
+                </div> -->
+                <script src="app.js"></script>
             </div>
         </div>
         
