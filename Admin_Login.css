@@ -19,7 +19,8 @@
   top: 142px;
   left: 80px;
   right: 80px;
-  background: url(Images/Background.png);
+  background: url(Images/Background.png) no-repeat center fixed;
+  background-size: cover;
   position: absolute;
   border-radius: 30px;
 }
