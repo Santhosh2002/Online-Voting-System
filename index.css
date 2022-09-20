@@ -18,7 +18,8 @@
   top: 142px;
   left: 80px;
   right: 80px;
-  background: url(Images/Background.png);
+  background: url(Images/Background.png) no-repeat center fixed;
+  background-size: cover;
   background-color: rgba(199, 199, 199, 0.5);
   position: absolute;
   border-radius: 30px;
@@ -169,20 +170,20 @@ div .fa-solid{
 }
 /*--------- Contact---------*/
 
-.About {
+.Contact {
   width: 100%;
   background-color: rgba(62, 78, 117, 0.65);
   margin: auto;
   text-align: center;
   padding: 20px;
 }
-.About h1 {
+.Contact h1 {
   color: rgb(255, 255, 255);
   font-size: 28px;
   font-weight: 600;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.About p {
+.Contact p {
   padding: 10px;
   color: rgb(255, 255, 255);
   font-size: 16px;

@@ -6,6 +6,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+img{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
 .sidebar{
   position: fixed;
   height: 100%;
@@ -30,7 +35,7 @@
 }
 .sidebar .logo-details .logo_name{
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
 }
 .sidebar .nav-links{

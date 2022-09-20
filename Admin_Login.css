@@ -171,8 +171,8 @@ form {
 .input-field i{
     text-align: center;
     line-height: 55px;
-    color: #cacaca;
-    font-size: 1.5rem;
+    color:#c0a52b;
+    font-size: 1.58rem;
 }
 
 .input-field input{
@@ -192,7 +192,7 @@ form {
 
 .btn{
     width: 150px;
-    height: 49px;
+    height: 53px;
     outline: none;
     border: none;
     border-radius: 48px;

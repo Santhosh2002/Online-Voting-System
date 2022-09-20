@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Voting System</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
@@ -16,11 +18,11 @@
             <a href = "index.html" class ="Company">Online Voting System</a>
             <div class ="nav-links" id ="navLinks">
                 <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="login.html">LOGIN</a></li>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">CONTACT</a></li>
+                <ul class="navbar-nav">
+                    <li><a class="nav-links scroll"  href="index.html">HOME</a></li>
+                    <li><a class="nav-links scroll" href="login.html">LOGIN</a></li>
+                    <li><a class="nav-links scroll" href="">ABOUT US</a></li>
+                    <li><a class="nav-links scroll" href="#contact_us">CONTACT</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onClick="showMenu()"></i>
@@ -45,19 +47,126 @@
 
     </section>
 
-<section class = "About">
-    <h1>About Us</h1>
+
+    <section class="Contact" id="contact_us">
 
 
-    <div class="footer-line">
-        <p>Online Voting system &copy; Copyrights <script>document.write(new Date().getFullYear())</script>, All Rights Reserved.</p>
-        
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-    </div>
-</section>
+        <div class="content">
+            <h1>Contact Us</h1>
+            <h2>Feel Free to Contact</h2>
+
+            <p>Hello Everyone! Have a great day:) I am here to help you.
+                <br>If you want to know something or you have any suggestion then pleasen mail me.
+                <br> Thank You &copy; Copyrights</p>
+            <script>
+                document.write(new Date().getFullYear())
+            </script>, All Rights Reserved.</p>
+
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+
+        <div class="container_contact">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Indian Institute of Information Technology, Vadodara
+                            <br>Gandhinagar, Gujarat,<br>382028
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+91-9998880000</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>e-voting@digitalindia.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contactForm">
+
+                <div class="inputBox">
+                    <form action="#" class="contact_us-form">
+                        <h2 class="title">Send Message</h2>
+                        <div class="inputBox">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="Name" placeholder="Full Name" onblur="AadharValidate()">
+                        </div>
+                        <div class="inputBox">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <input id="Email" placeholder="Your Email">
+                        </div>
+                        <div class="inputBox">
+                            <i class="fa fa-commenting" aria-hidden="true"></i>
+                            <input id="Message" placeholder="Type your Message...">
+                        </div>
+                        <input type="submit" class="btn solid" value="Send">
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        $(document).ready(function() {
+            var scrollLink = $(' .scroll');
+
+            //Smooth scrolling
+            scrollLink.click(function(e) {
+                e.preventDefault();
+                $('body,html').animated({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+            // Active link switching
+            $(window).scroll(function() {
+                var scrolbarLocation = $(this).scrollTop();
+
+                scrollLink.each(function() {
+                    var sectionOffset = $(this.hash).offset().top
+
+                    if (sectionOffset <= scrolbarLocation) {
+                        $(this).parent().addClass('active');
+                        $(this).parent().siblings.removeClass('active');
+                    }
+                })
+            })
+        })
+    </script>
+
+
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
 
 
 
