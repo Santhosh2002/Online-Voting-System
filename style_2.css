@@ -10,16 +10,25 @@ img{
   width: 40px;
   height: 40px;
   border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .sidebar{
   position: fixed;
   height: 100%;
-  width: 240px;
+  width: 270px;
   background: #ff9c2c;
   transition: all 0.5s ease;
 }
 .sidebar.active{
   width: 60px;
+}
+.sidebar.active img{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .sidebar .logo-details{
   height: 80px;
@@ -31,12 +40,13 @@ img{
   font-weight: 500;
   color: #fff;
   min-width: 60px;
-  text-align: center
+  text-align: center;
 }
 .sidebar .logo-details .logo_name{
   color: #fff;
-  font-size: 18px;
+  font-size: 17.5px;
   font-weight: 500;
+  white-space: nowrap;
 }
 .sidebar .nav-links{
   margin-top: 10px;
@@ -63,7 +73,7 @@ img{
 .sidebar .nav-links li i{
   min-width: 60px;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
 }
 .sidebar .nav-links li a .links_name{
