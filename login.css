@@ -6,7 +6,7 @@
 }
 
 .header {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   background-color: rgb(255, 255, 255);
   background-position: center;
@@ -15,7 +15,7 @@
 }
 
 .Home {
-  height: 80%;
+  height: 85%;
   top: 142px;
   left: 80px;
   right: 80px;
@@ -226,7 +226,7 @@ form {
     line-height: 1;
     font-weight: 600;
     font-size: 1.2rem;
-    color: rgb(250, 41, 41);
+    color: rgb(0, 0, 0);
 }
 
 .input-field input:placeholder-shown {
@@ -273,9 +273,10 @@ form {
   display: flex;
   flex-direction: row;
   margin-top: 15px;
+
 }
 canvas{
-    width:150px ;
+    width:200px ;
     height:70px; 
     
     /* margin-left: -45px; */
@@ -283,7 +284,45 @@ canvas{
     border-radius: 10px;
     background-color: rgba(174, 188, 199, 0.808);
 }
-#restart{
+#refresh{
    width: 100px;
    margin-left: 50px;
+}
+
+.alert {
+  position: absolute;
+  padding: 20px;
+  top: 45px;
+  width: 450px;
+  background-color: #f44336;
+  color: white;
+  transition: opacity 0.6s;
+  margin-bottom: 30px;
+  transform: translate(55%,5%);
+  scale: 1;
+  visibility: hidden;
+  transition: transform 0.4s;
+
+}
+.open-Alert{
+  visibility: visible;
+  transform: translate(55%,5%) scale(1);
+}
+.alert.success {background-color: #04AA6D;}
+.alert.info {background-color: #2196F3;}
+
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }

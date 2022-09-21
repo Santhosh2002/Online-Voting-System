@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Voting System</title>
-    <link rel="stylesheet" href="login.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Voting System</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <section class="header">
-        <nav>
-            <a href = "index.html"><img src = "Images/Logo 2.png"></a>
-            <a href = "index.html" class ="Company">Online Voting System</a>
-            <div class ="nav-links" id ="navLinks">
-                <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="Admin_Login.html">ADMIN LOGIN</a></li>
-                </ul>
+  
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="Images/Logo 2.png"></a>
+    
+      <a href="index.html" class="Company">Online Voting System</a>
+      <div class="alertPopup">
+        <div class="alert" id="A1" >
+          <span class="closebtn">&times;</span>
+          <strong>Unsuccess!</strong> Invalid Aadhar number.
+        </div>
+  
+        <div class="alert success" id="A2">
+          <span class="closebtn">&times;</span>
+          <strong>Success!</strong> Your Aadhar is validated
+        </div>
+  
+        <div class="alert info" id="A3" >
+          <span class="closebtn">&times;</span>
+          <strong>Captcha!</strong> Incorrect CAPTCHA.
+        </div>
+  
+        
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="Admin_Login.html">ADMIN LOGIN</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onClick="showMenu()"></i>
+
+
+    </nav>
+    <div class="Home">
+      <div class="text-box">
+        <div class="signin-signup">
+          
+          <form action="#" class="sign-in-form">
+            <i class="fa-solid fa-circle-user"></i>
+            <h2 class="title">Voter</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" id="Aadhar" placeholder="Aadhar Number">
+            </div>  
+            <div class=" input-field">
+              <i class="fas fa-lock"></i>
+              <input id="Captcha" placeholder="Enter CAPTCHA">
+
             </div>
-            <i class="fa-solid fa-bars" onClick="showMenu()"></i>
-            
+            <div class="captcha-box">
+              <canvas id="myCanvas"> </canvas>
+              <input type="button" id="refresh" class="btn solid" value="Refresh">
+            </div>
 
-        </nav>
-        <div class="Home">
-            <div class="text-box">
-                <div class="signin-signup">
-                    <form action="#" class="sign-in-form">
-                        <i class="fa-solid fa-circle-user"></i>
-                    <h2 class="title">Voter</h2>  
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id ="Aadhar" placeholder="Aadhar Number" ">
-                    </div>  
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input id="Captcha" placeholder="Enter CAPTCHA">
-                        
-                    </div>
-                    <div class="captcha-box">
-                        <canvas id="myCanvas"> </canvas> 
-                        <input type="button" id="restart" class="btn solid" value="Restart" >
-                    </div>
-                    
-                    <input type="button" id="gen_otp" class="btn solid" value="Generate OTP"  onclick="myFunction()">
-                    <script>
-                        function myFunction() {
-                          window.location.href="Dashboard.html";
-                        }
-                      </script>
-                    
+            <input type="button" id="gen_otp" class="btn solid" value="Generate OTP" onclick="myFunction()">
+            <script>
+              let popup1 = document.getElementById("A1");
+              let popup2 = document.getElementById("A2");
+              let popup3 = document.getElementById("A3");
+              let Aadhar = document.getElementById("Aadhar").value;
+              popup2.classList.add("open-Alert");
+              function myFunction() {
+                
+                alert(document.getElementById("Aadhar").value);
+                if(Aadhar==null || Captcha){
+                  
+                  
+                }
+                
+                  
+                }</script>
+            <span id="output"></span>
+            <script src="script.js"></script>
 
-                    </form>
-                </div>
-                <!-- <div class="center">
+          </form>
+        </div>
+        <!-- <div class="center">
                     <h1 id="captchaHeading">
                         Captcha Validator Using HTML, CSS and JavaScript
                     </h1>
@@ -70,37 +106,12 @@
                     </div>
                 
                 </div> -->
-                <script src="app.js"></script>
-                <script>
-                    var c = document.getElementById("myCanvas");
-                    var ctx = c.getContext("2d");
-                    ctx.font = "40px Arial";
-                    ctx.fillText("Ac59iz", 75, 75);
-                    </script>
-            </div>
-        </div>
-        
-    </section>
 
-    <script type="text/javascript">
-        function AadharValidate() {
-          var aadhar = document.getElementById("Aadhar").value;
-          var adharcardTwelveDigit = /^\d{12}$/;
-          var adharSixteenDigit = /^\d{16}$/;
-          if (aadhar != '') {
-            if (aadhar.match(adharcardTwelveDigit)) {
-              return true;
-            }
-            else if (aadhar.match(adharSixteenDigit)) {
-              return true;
-            }
-            else {
-              alert("Enter valid Aadhar Number");
-              return false;
-            }
-          }
-        }
-      </script>
+      </div>
+    </div>
+    
+  </section>
 
 </body>
+
 </html>
