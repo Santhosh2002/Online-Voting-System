@@ -289,10 +289,12 @@ canvas{
 }
 
 .alert {
+  
   position: absolute;
   padding: 20px;
   top: 45px;
   width: 450px;
+  text-align: center;
   background-color: #f44336;
   color: white;
   transition: opacity 0.6s;
@@ -310,6 +312,7 @@ canvas{
 }
 .alert.success {background-color: #04AA6D;}
 .alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
 
 
 .closebtn {

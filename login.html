@@ -20,20 +20,20 @@
       <a href="index.html" class="Company">Online Voting System</a>
       <div class="alertPopup">
         <div class="alert" id="A1" >
-          <span class="closebtn">&times;</span>
           <strong>Unsuccess!</strong> Invalid Aadhar number.
         </div>
   
         <div class="alert success" id="A2">
-          <span class="closebtn">&times;</span>
           <strong>Success!</strong> Your Aadhar is validated
         </div>
   
         <div class="alert info" id="A3" >
-          <span class="closebtn">&times;</span>
           <strong>Captcha!</strong> Incorrect CAPTCHA.
         </div>
   
+        <div class="alert warning"> 
+          <strong>Warning!</strong> Please fill the Fields.
+        </div>
         
       </div>
       
@@ -103,8 +103,14 @@
                   if (e.keyCode === 13) {
                       if (userText.value === c) {
                         popupCo.classList.add("open-Alert");
+                        setTimeout(() => {
+                            popupCo.classList.remove("open-Alert");
+                        },1000);
                       } else {
                         popupIn.classList.add("open-Alert");
+                        setTimeout(() => {
+                            popupIn.classList.remove("open-Alert");
+                        },1000);
                       }
                   }
               });
@@ -112,8 +118,14 @@
               submitButton.addEventListener('click', function() {
                   if (userText.value === c) {
                     popupCo.classList.add("open-Alert");
+                    setTimeout(() => {
+                            popupCo.classList.remove("open-Alert");
+                        },1000);
                   } else {
                     popupIn.classList.add("open-Alert");
+                    setTimeout(() => {
+                            popupIn.classList.remove("open-Alert");
+                        },1000);
                   }
               });
 
@@ -130,8 +142,9 @@
               });
 
             </script>
-            <script>
+            <!-- <script>
               var close = document.getElementsByClassName("closebtn");
+
               var i;
 
               for (i = 0; i < close.length; i++) {
@@ -144,7 +157,8 @@
                   setTimeout(function(){ div.style.display = "none"; }, 600);
                 }
               }
-            </script>
+            
+            </script> -->
             <script>
 
               let popup1 = document.getElementById("A1");
