@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authenticate</title>
+  <link rel="stylesheet" href="Authenticate.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-box'></i>
+      <span class="logo_name">Online Voting System</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+      <a href="#" class="active">
+        <i class='bx bx-grid-alt' ></i>
+        <span class="links_name">Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-id-card'></i>
+        <span class="links_name">Authentication</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">Elections List</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-trophy'></i>
+        <span class="links_name">Results</span>
+      </a>
+    </li>
+
+    <li class="log_out">
+      <a href="#">
+        <i class='bx bx-log-out'></i>
+        <span class="links_name">Log out</span>
+      </a>
+    </ul>
+  </div>
+
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Authenticate</span>
+      </div>
+      <div class="profile-details">
+        <img src="Images/profile.jpg" alt="">
+        <span class="admin_name">Profile</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+
+    <!-- FORMS -->
+
+
+    <div class="Home">
+      <div class="text-box">
+          <div class="signin-signup">
+              <form action="#" class="sign-in-form">
+              <i class="fa-solid fa-circle-user"></i>
+              <h2 class="title">Verfication</h2>  
+              <div class="input-field">
+                  <i class="fas fa-user"></i> 
+                  <input type="text" placeholder="Voter ID">
+              </div>  
+              <div class="input-field">
+                  <i class="fas fa-lock"></i>
+                  <input type="captha" placeholder="CAPTCHA">
+              </div>
+              <div class="captcha-box">
+                <canvas id="myCanvas"> </canvas> 
+                <input type="button" id="restart" class="btn solid" value="Restart" >
+            </div>
+              <input type="submit" id="Login" class="btn solid" value="Verify" >
+              <script>
+                function myFunction() {
+                  window.location.href="ElectionList.html";
+                }
+              </script>
+
+              </form>
+          </div>
+          <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "40px Arial";
+            ctx.fillText("Ac59iz", 75, 75);
+            </script>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    function AadharValidate() {
+      var aadhar = document.getElementById("Aadhar").value;
+      var adharcardTwelveDigit = /^\d{12}$/;
+      var adharSixteenDigit = /^\d{16}$/;
+      if (aadhar != '') {
+        if (aadhar.match(adharcardTwelveDigit)) {
+          return true;
+        }
+        else if (aadhar.match(adharSixteenDigit)) {
+          return true;
+        }
+        else {
+          alert("Enter valid Aadhar Number");
+          return false;
+        }
+      }
+    }
+  </script>
+
+  </section>
+
+  <script src="Authenticate.js"></script>
+</body>
+</html>
