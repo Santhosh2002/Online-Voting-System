@@ -9,8 +9,6 @@
   min-height: 90vh;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  background-position: center;
-  background-size: cover;
   position: relative;
 }
 
@@ -48,8 +46,8 @@
 nav {
   display:flex;
   padding: 2% 3%;
-  justify-content: space-between;
-  align-items: center;
+align-items: center;
+
 }
 nav img {
   width: 80px;

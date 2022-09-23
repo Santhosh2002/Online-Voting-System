@@ -11,53 +11,176 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <section class="header">
-        <nav>
-            <a href = "index.html"><img src = "Images/Logo 2.png"></a>
-            <a href = "index.html" class ="Company">Online Voting System</a>
-            <div class ="nav-links" id ="navLinks">
+    <div class="header">
+        <nav id="navbar">
+            <a href="index.html"><img src="Images/Logo 2.png"></a>
+            <a href="index.html" class="Company">Online Voting System</a>
+            <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
                 <ul class="navbar-nav">
-                    <li><a class="nav-links scroll"  href="index.html">HOME</a></li>
+                    <li><a class="nav-links scroll" href="index.html">HOME</a></li>
                     <li><a class="nav-links scroll" href="login.html">LOGIN</a></li>
                     <li><a class="nav-links scroll" href="">ABOUT US</a></li>
-                    <li><a class="nav-links scroll" href="#contact_us">CONTACT</a></li>
+                    <li><a class="nav-links scroll" href="#contact">CONTACT</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" onClick="showMenu()"></i>
-            
+
 
         </nav>
-        <div class="Home">
+    </div>
 
-            <div class="text-box">
+    <div class="Home">
 
-                <h1>Digital Indian's New Voting System </h1>
-            
-                <p>An Online Voting System to digitalize the Voting process while using the latest 
-                    technology <br>to make the process more Secure, Transperant, Immutable and Reliable 
-                    <br>in order to deliver an effective scheme for electronic Voting
-                </p>
-            
-                <a href="" class = "hero-btn">Visit Us To know More</a>
-            </div>
-            
+        <div class="text-box">
+
+            <h1>Digital Indian's New Voting System </h1>
+
+            <p>An Online Voting System to digitalize the Voting process while using the latest technology <br>to make the process more Secure, Transperant, Immutable and Reliable
+                <br>in order to deliver an effective scheme for electronic Voting
+            </p>
+
+            <a href="" class="hero-btn">Visit Us To know More</a>
         </div>
 
+    </div>
+
+    <section class="sec">
+        <div class="about">
+            <div class="card">
+                <div class="content_about">
+                    <div class="imgBx"><img src="Images/gaurav.png"></div>
+                    <div class="contentBx">
+                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="Images/gaurav.png"></div>
+                    <div class="contentBx">
+                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="Images/gaurav.png"></div>
+                    <div class="contentBx">
+                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
     </section>
 
 
-    <section class="Contact" id="contact_us">
+    <div class="contact" id="contact">
 
 
         <div class="content">
-            <h1>Contact Us</h1>
+            <h1 id="head">Contact Us</h1>
             <h2>Feel Free to Contact</h2>
 
-            <p>Hello Everyone! Have a great day:) I am here to help you.
-                <br>If you want to know something or you have any suggestion then pleasen mail me.
-                <br> Thank You &copy; Copyrights</p>
+            <p>Hello Everyone! Have a great day :) I am here to help you.
+                <br>If you want to know something or you have any suggestions feel free to contact us.
+            </p>
+        </div>
+
+        <div class="container_contact">
+
+            <div class="contactForm">
+                <form>
+                    <h2>SEND MESSAGE</h2>
+                    <div class="inputbox">
+                        <input placeholder="Full Name" type="text" name="" required="required">
+                        <!-- <span>Full Name</span> -->
+                    </div>
+                    <div class="inputbox">
+                        <input placeholder="Email" type="text" name="" required="required">
+                        <!-- <span>Email</span> -->
+                    </div>
+                    <div class="inputbox">
+                        <textarea placeholder="Message" type="text" name="" required="required"></textarea>
+                        <!-- <span>Type your message...</span> -->
+                    </div>
+                    <div class="inputbox">
+                        <input id="button" type="submit" name="" value="Send">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="contactInfo">
+            <div class="box" id="b1">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>Indian Institute of Information Technology, Vadodara
+                        <br>Gandhinagar, Gujarat,<br>382028
+                    </p>
+                </div>
+            </div>
+
+            <div class="box" id="b2">
+                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>+91-9998880000</p>
+                </div>
+            </div>
+
+            <div class="box" id="b3">
+                <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <a href="https://www.youtube.com">e-voting@digitalindia.com</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="coyrights">
+            <p> Thank You &copy; Copyrights</p>
             <script>
                 document.write(new Date().getFullYear())
             </script>, All Rights Reserved.</p>
@@ -67,93 +190,7 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-linkedin"></i>
         </div>
-
-        <div class="container_contact">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>Address</h3>
-                        <p>Indian Institute of Information Technology, Vadodara
-                            <br>Gandhinagar, Gujarat,<br>382028
-                        </p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>Phone</h3>
-                        <p>+91-9998880000</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-                    <div class="text">
-                        <h3>Email</h3>
-                        <p>e-voting@digitalindia.com</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="contactForm">
-
-                <div class="inputBox">
-                    <form action="#" class="contact_us-form">
-                        <h2 class="title">Send Message</h2>
-                        <div class="inputBox">
-                            <i class="fas fa-user"></i>
-                            <input type="text" id="Name" placeholder="Full Name" onblur="AadharValidate()">
-                        </div>
-                        <div class="inputBox">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                            <input id="Email" placeholder="Your Email">
-                        </div>
-                        <div class="inputBox">
-                            <i class="fa fa-commenting" aria-hidden="true"></i>
-                            <input id="Message" placeholder="Type your Message...">
-                        </div>
-                        <input type="submit" class="btn solid" value="Send">
-
-                    </form>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <script>
-        $(document).ready(function() {
-            var scrollLink = $(' .scroll');
-
-            //Smooth scrolling
-            scrollLink.click(function(e) {
-                e.preventDefault();
-                $('body,html').animated({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-            // Active link switching
-            $(window).scroll(function() {
-                var scrolbarLocation = $(this).scrollTop();
-
-                scrollLink.each(function() {
-                    var sectionOffset = $(this.hash).offset().top
-
-                    if (sectionOffset <= scrolbarLocation) {
-                        $(this).parent().addClass('active');
-                        $(this).parent().siblings.removeClass('active');
-                    }
-                })
-            })
-        })
-    </script>
-
-
+    </div>
 
 
     <script>
@@ -168,22 +205,18 @@
         }
     </script>
 
+    <script>
+        var navLinks = document.getElementById("navLinks");
 
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
 
-
-<script>
-
-    var navLinks = document.getElementById("navLinks");
-    
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right="-200px";
-    }
-  
-
-</script>
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
 
 </body>
+
 </html>
