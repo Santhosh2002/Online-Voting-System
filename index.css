@@ -41,7 +41,8 @@
 .Company {
     color: black;
     text-decoration: none;
-    color: rgba(33, 67, 97, 0.753);
+    margin-left: 10px;
+    color: #fff;
     font-size: 28px;
     font-weight: 510;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -54,7 +55,11 @@ nav {
     align-items: center;
     position: fixed;
     z-index: 1;
+<<<<<<< Updated upstream
     background-color: rgb(255, 255, 255);
+=======
+    background-color: rgba(0, 0, 0, 0.761);
+>>>>>>> Stashed changes
     width: 100%;
     height: 10%;
 }
@@ -77,7 +82,11 @@ nav img {
 }
 
 .nav-links ul li a {
+<<<<<<< Updated upstream
     color: rgb(0, 0, 0);
+=======
+    color: #fff;
+>>>>>>> Stashed changes
     text-decoration: none;
     font-size: 17.5px;
     font-weight: 510;
@@ -190,6 +199,85 @@ div .fa-solid {
         border-radius: 0px;
     }
 }
+
+
+/*----------- About---------- */
+
+section {
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%);
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+
+.about {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.about .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.about.card.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.about .card:hover .content {
+    opacity: 1;
+}
+
+.about .card .content .imgBx {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0, 0, 0, 0.25);
+    opacity: 1;
+}
+
+.about .card .content .imgBx img {}
 
 
 /*--------- Contact---------*/

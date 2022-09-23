@@ -47,8 +47,75 @@
 
     </div>
 
+    <section class="sec">
+        <div class="about">
+            <div class="card">
+                <div class="content_about">
+                    <div class="imgBx"><img src="Images/gaurav.png"></div>
+                    <div class="contentBx">
+                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="Images/gaurav.png"></div>
+                    <div class="contentBx">
+                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="Images/gaurav.png"></div>
+                    <div class="contentBx">
+                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    </li>
+                    <li style="--i:1">
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+
     <div class="contact" id="contact">
-        
+
 
         <div class="content">
             <h1 id="head">Contact Us</h1>
@@ -125,51 +192,6 @@
         </div>
     </div>
 
-    <!-- <script>
-        window.onscroll = function() {
-            myFunction()
-        };
-        // Get the navbar
-        var navbar = document.getElementById("navbar");
-
-        // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
-
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script> -->
-    <script>
-        $(document).ready(function() {
-            var scrollLink = $(' .scroll');
-
-            //Smooth scrolling
-            scrollLink.click(function(e) {
-                e.preventDefault();
-                $('body,html').animated({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
-            // Active link switching
-            $(window).scroll(function() {
-                var scrolbarLocation = $(this).scrollTop();
-
-                scrollLink.each(function() {
-                    var sectionOffset = $(this.hash).offset().top
-
-                    if (sectionOffset <= scrolbarLocation) {
-                        $(this).parent().addClass('active');
-                        $(this).parent().siblings.removeClass('active');
-                    }
-                })
-            })
-        })
-    </script>
 
     <script>
         var navLinks = document.getElementById("navLinks");
