@@ -1,197 +1,260 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Online Voting System</title>
-    
-    <link rel="stylesheet" href="style_2.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <img src="Images/Logo 2.png" alt="Logo">
-      <span class="logo_name">Online Voting System</span>
-    </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#" class="active">
-            <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-id-card'></i>
-            <span class="links_name">Authentication</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-list-ul'></i>
-            <span class="links_name">Elections List</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-trophy'></i>
-            <span class="links_name">Results</span>
-          </a>
-        </li>
 
-        <li class="log_out">
-          <a href="login.html">
-            <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
-      </ul>
-  </div>
+    
 
-  <section class="home-section">
-    <nav>
-      <div class="sidebar-button">
-        <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Dashboard</span>
-      </div>
-      <!-- <div class="search-box">
-        <input type="text" placeholder="Search...">
-        <i class='bx bx-search' ></i>
-      </div> -->
-      <div class="profile-details">
-        <img src="Images/profile.jpg" alt="">
-        <span class="admin_name">Profile</span>
-        <i class='bx bx-chevron-down' ></i>
-      </div>
-    </nav>
-
-    <div class="home-content">
-      <div class="overview-boxes">
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Step 1</div>
-            <div class="number">Select A Live Poll </div>
-            <div class="indicator">
-              <i class='bx bx-right-arrow-alt' ></i>
-              <span class="text">Show More</span>
-            </div>
-          </div>
-          <!-- <i class='bx bx-cart-alt cart'></i> -->
-        </div>
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Step 2</div>
-            <div class="number">Verify Aadhar</div>
-            <div class="indicator">
-              <i class='bx bx-right-arrow-alt' ></i>
-              <span class="text">Show More</span>
-            </div>
-          </div>
-          <!-- <i class='bx bxs-cart-add cart two' ></i> -->
-        </div>
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Step 3</div>
-            <div class="number">View Candidate List </div>
-            <div class="indicator">
-              <i class='bx bx-right-arrow-alt' ></i>
-              <span class="text">Show More</span>
-            </div>
-          </div>
-          <!-- <i class='bx bx-cart cart three' ></i> -->
-        </div>
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Step 4</div>
-            <div class="number">Cast your Vote</div>
-            <div class="indicator">
-              <i class='bx bx-right-arrow-alt' ></i>
-              <span class="text">Show More</span>
-            </div>
-          </div>
-          <!-- <i class='bx bxs-cart-download cart four' ></i> -->
-        </div>
-      </div>
-
-      <div class="sales-boxes">
-        <div class="recent-sales box">
-          <div class="title">Upcoming Elections</div>
-          <div class="sales-details">
-            <ul class="details">
-              <li class="topic">Date</li>
-              <li><a href="#">Nov 2022</a></li>
-              <li><a href="#">Dec 2022</a></li>
-              <li><a href="#">TBD</a></li>
-
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="Plugin icon - 1.png" alt="">
+                        <span class="Title">Online Voting System</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="Title">Dashborad</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-id-card'></i>
+                        <span class="Title">Authentication</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="Title">Election List</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-trophy'></i>
+                        <span class="Title">Results</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="Title">Logout</span>
+                    </a>
+                </li>
             </ul>
-            <ul class="details">
-            <li class="topic">Type</li>
-            <li><a href="#">State Legislative</a></li>
-            <li><a href="#">State Legislative</a></li>
-            <li><a href="#">Legislative</a></li>
-
-          </ul>
-          <ul class="details">
-            <li class="topic">Area</li>
-            <li><a href="#">Himachal Pradesh</a></li>
-            <li><a href="#">Gujrat</a></li>
-            <li><a href="#">Gopalganj, Bihar</a></li>
-
-          </ul>
-          </div>
-          <div class="button">
-            <a href="#">See All</a>
-          </div>
         </div>
-        <div class="top-sales box">
-          <div class="title">Recent News</div>
-          <ul class="top-sales-details">
-            <li>
-            <a href="#">
-              <img src="Images/HT_logo.jpg" alt="">
-              <span class="product">BJP wins in West Bengal's Nandigram</span>
-            </a>
-            <span class="price"><a target="_blank" href="https://www.hindustantimes.com/india-news/bjp-wins-election-in-west-bengal-s-nandigram-cooperative-body-101663508160389.html">Know more</a></span>
-          </li>
-          <li>
-            <a href="#">
-              <img src="Images/ABP_live.jpg" alt="">
-              <span class="product">Maharashtra Gram Panchayat Results</span>
-            </a>
-            <span class="price"><a target="_blank" href="https://news.abplive.com/news/india/maharashtra-gram-panchayat-election-result-2022-updates-bjp-eknath-shinde-shiv-sena-alliance-congress-ncp-1554096">Know more</a></span>
-          </li>
-          <li>
-            <a href="#">
-              <img src="Images/BS_logo.jpg" alt="">
-              <span class="product">Election Commission launched E-Patrika</span>
-            </a>
-            <span class="price"><a target="_blank" href="https://currentaffairs.adda247.com/election-commission-of-india-launched-blo-e-patrika/">Know more</a></span>
-          </li>
-          <li>
-            <a href="#">
-              <img src="Images/adda247_logo.jpg" alt="">
-              <span class="product">EC team visits Gujarat ahead of polls</span>
-            </a>
-            <span class="price"><a target="_blank" href="https://www.business-standard.com/article/current-affairs/ec-team-visits-gujarat-ahead-of-polls-reviews-election-preparedness-122091900048_1.html">Know more</a></span>
-          </li>
-          </ul>
-        </div>
-      </div>
+
+
+        <!-- MAIN STARTS-->
+        <div class="main">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+                <!-- TOGGLE BUTTON STARTS-->
+                <div class="toggle">
+                    <i class='bx bx-menu'></i>
+                    <div class="dashboard">Dashboard</div>
+                </div>
+                
+                <!-- TOGGLE BUTTON ENDS -->
+
+
+                <!-- PTOFILE STARTS -->
+                <div class="user">
+                    <img src="profile.jpg" alt="" class="">
+                    <span class="profile_name">Profile</span>
+                    <i class='bx bx-chevron-down' ></i>
+                </div>
+                <!-- PROFILE ENDS -->
+            </div>
+            <!-- TOPBAR ENDS -->
+
+            <!-- CARDS STARTS -->
+            <div class="cardbox">
+                <div class="card" id="card_one">
+                    <div>
+                       <div class="step_number"> Step 1 </div>
+                       <div class="step_text">Select a Live Poll</div>
+                    </div>
+                    <div class="iconbox">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                        <span class="text">Show More</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                       <div class="step_number"> Step 2 </div>
+                       <div class="step_text">Verify your Voter ID</div>
+                    </div>
+                    <div class="iconbox">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                        <span class="text">Show More</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                       <div class="step_number"> Step 3 </div>
+                       <div class="step_text">View the Candidate List</div>
+                    </div>
+                    <div class="iconbox">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                        <span class="text">Show More</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                       <div class="step_number"> Step 4 </div>
+                       <div class="step_text">Cast your Vote</div>
+                    </div>
+                    <div class="iconbox">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                        <span class="text">Show More</span>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD ENDS -->
+
+           <!-- Initially here -->
+            
+
+            <!-- DETAILS -->
+            <div class="details">
+                <div class="upcoming_elections">
+                    <div class="cardheader">
+                        <h2>Upcoming Elections</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                       <thead>
+                        <tr>
+                            <td>Date</td>
+                            <td>Type</td>
+                            <td>Location</td>
+                            <td>Status</td>
+                        </tr>
+                       </thead> 
+                       <tbody>
+                        <tr>
+                            <td>Nov 2022</td>
+                            <td>State Legislative</td>
+                            <td>Himachal Pradesh</td>
+                            <td><span class="status_ongoing">Ongoing</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 2022</td>
+                            <td>State Legislative</td>
+                            <td>Gujrat</td>
+                            <td><span class="status_offline">Offline</span></td>
+                        </tr>
+                        <tr>
+                            <td>TBD</td>
+                            <td>Legislative</td>
+                            <td>Gopalganj, Bhihar</td>
+                            <td><span class="status_offline">Offline</span></td>
+                        </tr>
+                        <tr>
+                            <td>14 Feb 2022</td>
+                            <td>State Legislative</td>
+                            <td>Uttarakhand</td>
+                            <td><span class="status_completed">Completed</span></td>
+                        </tr>
+                       </tbody>
+                    </table>
+                </div>
+
+
+                <div class="recent_news">
+                    <div class="cardheader">
+                        <h2>Recent News</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbox">
+                                    <img src="Images/HT_logo.jpg" alt="">
+                                </div>
+                                <td><h4>BJP wins in West Bengal's Nandigram<br>
+                                <span><a target="_blank" href="https://www.hindustantimes.com/india-news/bjp-wins-election-in-west-bengal-s-nandigram-cooperative-body-101663508160389.html">Know more</a></span></h4></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbox">
+                                    <img src="Images/ABP_live.jpg" alt="">
+                                </div>
+                                <td><h4>Maharashtra Gram Panchayat Results<br>
+                                    <span><a target="_blank" href="https://news.abplive.com/news/india/maharashtra-gram-panchayat-election-result-2022-updates-bjp-eknath-shinde-shiv-sena-alliance-congress-ncp-1554096">Know more</a></span></h4></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbox">
+                                    <img src="Images/BS_logo.jpg" alt="">
+                                </div>
+                                <td><h4>Election Commission launched E-Patrika<br>
+                                    <span><a target="_blank" href="https://currentaffairs.adda247.com/election-commission-of-india-launched-blo-e-patrika/">Know more</a></span></h4></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgbox">
+                                    <img src="Images/adda247_logo.jpg" alt="">
+                                </div>
+                                <td><h4>EC team visits Gujarat ahead of polls<br>
+                                    <span><a target="_blank" href="https://www.business-standard.com/article/current-affairs/ec-team-visits-gujarat-ahead-of-polls-reviews-election-preparedness-122091900048_1.html">Know more</a></span></h4></td>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>        
     </div>
-  </section>
 
-  <script>
-   let sidebar = document.querySelector(".sidebar");
-let sidebarBtn = document.querySelector(".sidebarBtn");
-sidebarBtn.onclick = function() {
-  sidebar.classList.toggle("active");
-  if(sidebar.classList.contains("active")){
-  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-}else
-  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-}
- </script>
 
+    <!-- SCRIPT -->
+    <script>
+     let toggle = document.querySelector('.toggle');
+     let navigation = document.querySelector('.navigation');   
+     let list = document.querySelectorAll('.navigation li');
+     let main = document.querySelector('.main');
+
+     toggle.onclick= function(){
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+     }
+
+     function activeLink(){
+        list.forEach((item) => 
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+     }   
+     list.forEach((item) =>
+     item.addEventListener('mouseover',activeLink));
+
+
+
+    // TRIAL
+    document.getElementById("card_one").addEventListener("click", function(){
+        document.getElementsByClassName("popup")[0].classList.add("active");
+    });
+
+    document.getElementById("dismiss").addEventListener("click", function(){
+        document.getElementsByClassName("popup")[0].classList.remove("active");
+    });
+
+
+    </script>
 </body>
 </html>
