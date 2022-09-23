@@ -10,10 +10,24 @@
     <script src="https://kit.fontawesome.com/0727b8a9bf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="header">
+    <div class="header">
         <nav>
             <a href = "index.html"><img src = "Images/Logo 2.png"></a>
             <a href = "index.html" class ="Company">Online Voting System</a>
+            <div class="alertPopup">
+                <div class="alert" id="A1" >
+                  <strong>Unsuccess!</strong> Invalid Usename/Password.
+                </div>
+          
+                <div class="alert success" id="A2">
+                  <strong>Success!</strong> Login Successfull.
+                </div>
+
+                <div class="alert warning" id="A3" > 
+                  <strong>Warning!</strong> Please fill the Fields.
+                </div>
+                
+              </div>
             <div class ="nav-links" id ="navLinks">
                 <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
                 <ul>
@@ -25,30 +39,63 @@
             
 
         </nav>
-        <div class="Home">
-            <div class="text-box">
-                <div class="signin-signup">
-                    <form action="#" class="sign-in-form">
+    </div>
+    <div class="Home">
+        <div class="text-box">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
                     <i class="fa-solid fa-circle-user"></i>
                     <h2 class="title">Admin</h2>  
                     <div class="input-field">
                         <i class="fas fa-user"></i> 
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" id="username">
                     </div>  
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" id ="password">
                     </div>
                     
                     <input type="submit" id="Login" class="btn solid" value="Login" >
 
-                    </form>
-                </div>
-                
+                    <script>
+            
+                        
+                        let popupCo = document.getElementById("A2");
+                        let popupIn = document.getElementById("A1");
+                        let popupInv = document.getElementById("A3");
+
+                        let LoginButton = document.querySelector('#Login');
+                        let Username = document.getElementById("username");
+                        let Password = document.getElementById("password");
+            
+                        LoginButton.addEventListener('click', function() {
+                            if (Username.value == "admin@digitialindia.com" && Password.value =="admin@123") {
+                                popupCo.classList.add("open-Alert");
+                                setTimeout(() => {
+                                        popupCo.classList.remove("open-Alert");
+                                    },1000);
+                            } 
+                            else if(Username.value == "" || Password.value ==""){
+                                popupInv.classList.add("open-Alert");
+                                setTimeout(() => {
+                                        popupInv.classList.remove("open-Alert");
+                                    },1000);
+                            }
+
+                            else {
+                                popupIn.classList.add("open-Alert");
+                                setTimeout(() => {
+                                        popupIn.classList.remove("open-Alert");
+                                    },1000);
+                            }
+                        });
+            
+                        </script>
+                </form>
             </div>
+            
         </div>
-        
-    </section>
+    </div>
 
 </body>
 </html>

@@ -13,10 +13,10 @@
 
 <body>
   
-  <section class="header">
+  <div class="header">
     <nav>
       <a href="index.html"><img src="Images/Logo 2.png"></a>
-    
+
       <a href="index.html" class="Company">Online Voting System</a>
       <div class="alertPopup">
         <div class="alert" id="A1" >
@@ -40,6 +40,7 @@
       <div class="nav-links" id="navLinks">
         <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
         <ul>
+          
           <li><a href="index.html">HOME</a></li>
           <li><a href="Admin_Login.html">ADMIN LOGIN</a></li>
         </ul>
@@ -48,6 +49,7 @@
 
 
     </nav>
+  </div>
     <div class="Home">
       <div class="text-box">
         <div class="signin-signup">
@@ -57,7 +59,7 @@
             <h2 class="title">Voter</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="Aadhar" placeholder="Mobile Number" >
+              <input type="text" id="Aadhar" placeholder="Aadhar Number" >
             </div>  
             <div class=" input-field">
               <i class="fas fa-lock"></i>
@@ -79,11 +81,13 @@
               ctx.fillStyle = "#000";
 
               let userText = document.querySelector('#Captcha');
+              let Aadhar = document.querySelector('#Aadhar');
               let submitButton = document.querySelector('#gen_otp');
               let refreshButton = document.querySelector('#refresh');
               let popupCo = document.getElementById("A2");
-              let popupIn = document.getElementById("A3");
-
+              let popupIn = document.getElementById("A1");
+              let popupInv = document.getElementById("A4");
+              let popupWar = document.getElementById("A3");
               // alphaNums contains the characters with which you want to create the CAPTCHA
               let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
               , 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c'
@@ -99,48 +103,58 @@
               ctx.fillText(emptyArr.join(''),captchaText.width/4, captchaText.height/2);
 
               userText.addEventListener('keyup', function(e) {
-                  // Key Code Value of "Enter" Button is 13
-                  if (e.keyCode === 13) {
-                      if (userText.value === c) {
-                        popupCo.classList.add("open-Alert");
-                        setTimeout(() => {
-                            popupCo.classList.remove("open-Alert");
-                        },1000);
-                      } else {
-                        popupIn.classList.add("open-Alert");
-                        setTimeout(() => {
-                            popupIn.classList.remove("open-Alert");
-                        },1000);
-                      }
-                  }
+                if (e.keyCode === 13) {
+                  login();
+                }
               });
 
               submitButton.addEventListener('click', function() {
-                  if (userText.value === c) {
-                    popupCo.classList.add("open-Alert");
-                    setTimeout(() => {
-                            popupCo.classList.remove("open-Alert");
-                        },1000);
-                  } else {
-                    popupIn.classList.add("open-Alert");
-                    setTimeout(() => {
-                            popupIn.classList.remove("open-Alert");
-                        },1000);
-                  }
+                login();
               });
 
               refreshButton.addEventListener('click', function() {
                   userText.value = "";
                   let refreshArr = [];
-                  for (let j = 1; j <= 7; j++) {
+                  refresh(refreshArr);
+              });
+              function refresh(refreshArr){
+                for (let j = 1; j <= 7; j++) {
                       refreshArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
                   }
                   ctx.clearRect(0, 0, captchaText.width, captchaText.height);
                   c = refreshArr.join('');
                   ctx.fillText(refreshArr.join(''),captchaText.width/4, captchaText.height/2);
-                  output.innerHTML = "";
-              });
-
+              }
+              function login(){
+                if (userText.value === c&&Aadhar.value ==="712979984763") {
+                  popupCo.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupCo.classList.remove("open-Alert");
+                  },1000);
+                } 
+                else if (userText.value === "" || Aadhar.value ==="") {
+                  popupInv.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupInv.classList.remove("open-Alert");
+                  },1000);
+                }
+                else if (userText.value !== c&&Aadhar.value==="712979984763"){
+                  popupWar.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupWar.classList.remove("open-Alert");
+                  },1000);
+                  let refreshArr = [];
+                  refresh(refreshArr);
+                }
+                else{
+                  popupIn.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupIn.classList.remove("open-Alert");
+                  },1000);
+                  let refreshArr = [];
+                  refresh(refreshArr,c,ctx);
+                }
+              }
             </script>
             <script>
               
@@ -154,8 +168,7 @@
               storageBucket: "onlinevotingsystem202.appspot.com",
               messagingSenderId: "411681836015",
               appId: "1:411681836015:web:92548096532a48a11a441a",
-              measurementId: "G-W9GHLCJ1JW"
-};
+              measurementId: "G-W9GHLCJ1JW"};
             </script>
 
           </form>
@@ -164,7 +177,6 @@
       </div>
     </div>
     
-  </section>
 
 </body>
 
