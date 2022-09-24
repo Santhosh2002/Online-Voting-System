@@ -59,11 +59,11 @@
             <h2 class="title">Voter</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="Aadhar" placeholder="Aadhar Number" >
+              <input type="number" id="Aadhar" placeholder="Aadhar Number" >
             </div>  
             <div class=" input-field">
               <i class="fas fa-lock"></i>
-              <input id="Captcha" placeholder="Enter CAPTCHA">
+              <input type ="text"id="Captcha" placeholder="Enter CAPTCHA">
 
             </div>
             <div class="captcha-box">
@@ -105,11 +105,13 @@
               userText.addEventListener('keyup', function(e) {
                 if (e.keyCode === 13) {
                   login();
+                  phoneAuth();
                 }
               });
 
               submitButton.addEventListener('click', function() {
                 login();
+                phoneAuth();
               });
 
               refreshButton.addEventListener('click', function() {
@@ -127,22 +129,24 @@
               }
               function login(){
                 if (userText.value === c&&Aadhar.value ==="712979984763") {
-                  popupCo.classList.add("open-Alert");
+                  
                   setTimeout(() => {
-                      popupCo.classList.remove("open-Alert");
-                  },1000);
+                      
+                  },2000);
+                      window.location.href = "OTP_Confirmation.html";
+
                 } 
                 else if (userText.value === "" || Aadhar.value ==="") {
                   popupInv.classList.add("open-Alert");
                   setTimeout(() => {
                       popupInv.classList.remove("open-Alert");
-                  },1000);
+                  },2000);
                 }
                 else if (userText.value !== c&&Aadhar.value==="712979984763"){
                   popupWar.classList.add("open-Alert");
                   setTimeout(() => {
                       popupWar.classList.remove("open-Alert");
-                  },1000);
+                  },2000);
                   let refreshArr = [];
                   refresh(refreshArr);
                 }
@@ -150,15 +154,13 @@
                   popupIn.classList.add("open-Alert");
                   setTimeout(() => {
                       popupIn.classList.remove("open-Alert");
-                  },1000);
+                  },2000);
                   let refreshArr = [];
                   refresh(refreshArr,c,ctx);
                 }
               }
             </script>
-            <script>
-              
-            </script>
+
             <script>
               
               const firebaseConfig = {
@@ -169,6 +171,10 @@
               messagingSenderId: "411681836015",
               appId: "1:411681836015:web:92548096532a48a11a441a",
               measurementId: "G-W9GHLCJ1JW"};
+              firebase.intializeApp(firebaseConfig);
+              function phoneAuth(){
+                var number = "+919515871972";
+                firebase.auth().signInWithPhoneNumber(number);
             </script>
 
           </form>
