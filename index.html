@@ -13,105 +13,58 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav id="navbar">
-            <a href="index.html"><img src="Images/Logo 2.png"></a>
-            <a href="index.html" class="Company">Online Voting System</a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
-                <ul class="navbar-nav">
-                    <li><a class="nav-links scroll" href="index.html">HOME</a></li>
-                    <li><a class="nav-links scroll" href="login.html">LOGIN</a></li>
-                    <li><a class="nav-links scroll" href="">ABOUT US</a></li>
-                    <li><a class="nav-links scroll" href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-            <i class="fa-solid fa-bars" onClick="showMenu()"></i>
+    <div class="First" id="first">
+        <div class="header">
+            <nav id="navbar">
+                <a href="#first"><img src="Images/Logo 2.png"></a>
+                <a href="#first" class="Company">Online Voting System</a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-rectangle-xmark" onClick="hideMenu()"></i>
+                    <ul class="navbar-nav">
+                        <!-- <li><a class="nav-links scroll" href="#first">HOME</a></li> -->
+                        <li><a class="nav-links scroll" href="login.html">LOGIN</a></li>
+                        <li><a class="nav-links scroll" href="#about">ABOUT US</a></li>
+                        <li><a class="nav-links scroll" href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onClick="showMenu()"></i>
 
 
-        </nav>
-    </div>
-
-    <div class="Home">
-
-        <div class="text-box">
-
-            <h1>Digital Indian's New Voting System </h1>
-
-            <p>An Online Voting System to digitalize the Voting process while using the latest technology <br>to make the process more Secure, Transperant, Immutable and Reliable
-                <br>in order to deliver an effective scheme for electronic Voting
-            </p>
-
-            <a href="" class="hero-btn">Visit Us To know More</a>
+            </nav>
         </div>
 
-    </div>
+        <div class="Home" id="home">
 
-    <section class="sec">
-        <div class="about">
-            <div class="card">
-                <div class="content_about">
-                    <div class="imgBx"><img src="Images/gaurav.png"></div>
-                    <div class="contentBx">
-                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
-                    </div>
-                </div>
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
+            <div class="text-box">
+
+                <h1>Digital Indian's New Voting System </h1>
+
+                <p>An Online Voting System to digitalize the Voting process while using the latest technology <br>to make the process more Secure, Transperant, Immutable and Reliable
+                    <br>in order to deliver an effective scheme for electronic Voting
+                </p>
+
+                <a href="" class="hero-btn">Visit Us To know More</a>
             </div>
-
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="Images/gaurav.png"></div>
-                    <div class="contentBx">
-                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
-                    </div>
-                </div>
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <div class="content">
-                    <div class="imgBx"><img src="Images/gaurav.png"></div>
-                    <div class="contentBx">
-                        <h3>Gaurav Verma<br><span>Full-Stack Developer</span></h3>
-                    </div>
-                </div>
-                <ul class="sci">
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-
 
         </div>
-    </section>
+    </div>
+
+    <!---------- About Us Page ----------->
+
+    <div class="About" id="about">
+
+
+        <div class="content_a">
+            <h1 id="head_a">About Us</h1>
+            <h2>Our team</h2>
+
+        </div>
+
+
+    </div>
+
+
+    <!-------------- Contact Us Page -------------->
 
 
     <div class="contact" id="contact">
@@ -133,15 +86,12 @@
                     <h2>SEND MESSAGE</h2>
                     <div class="inputbox">
                         <input placeholder="Full Name" type="text" name="" required="required">
-                        <!-- <span>Full Name</span> -->
                     </div>
                     <div class="inputbox">
                         <input placeholder="Email" type="text" name="" required="required">
-                        <!-- <span>Email</span> -->
                     </div>
                     <div class="inputbox">
                         <textarea placeholder="Message" type="text" name="" required="required"></textarea>
-                        <!-- <span>Type your message...</span> -->
                     </div>
                     <div class="inputbox">
                         <input id="button" type="submit" name="" value="Send">
@@ -192,6 +142,7 @@
         </div>
     </div>
 
+    <!------------- Scrolling Option -------------->
 
     <script>
         var navLinks = document.getElementById("navLinks");
