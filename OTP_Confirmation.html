@@ -13,10 +13,10 @@
 
 <body>
   
-  <section class="header">
+  <div class="header">
     <nav>
       <a href="index.html"><img src="Images/Logo 2.png"></a>
-    
+
       <a href="index.html" class="Company">Online Voting System</a>
       <div class="alertPopup">
         <div class="alert" id="A1" >
@@ -28,7 +28,7 @@
         </div>
   
         <div class="alert info" id="A3" >
-          <strong>Captcha!</strong> Incorrect CAPTCHA.
+          <strong>OTP!</strong> Incorrect OTP.
         </div>
   
         <div class="alert warning" id="A4" > 
@@ -36,81 +36,161 @@
         </div>
         
       </div>
-
-    </nav>
+      
+  </div>
     <div class="Home">
       <div class="text-box">
         <div class="signin-signup">
           
           <form action="#" class="sign-in-form">
             <i class="fa-solid fa-circle-user"></i>
-            <h2 class="title">OTP Conformation</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" id="OTP" placeholder="OTP" >
-            </div>  
+            <h2 class="title">Mobile Verification</h2>
+            <div class="mobile">
+              <p>The OTP is sent to this number XXXXXXX972. <br>Please don't share OTP with anyone.</p>
+            </div>
+            <div class="Input_Refresh">
+              <div class=" input-field">
+                <i class="fas fa-lock"></i>
+                <input id="OTP" placeholder="Enter OTP">
+                
+              </div>
+              <button id="Resend" ><i class="fa-solid fa-rotate-right"></i></button>
+            </div>
             
-            <input type="button" id="submit" class="btn solid" value="Submit">
+            <div class="OTP-box">
+              <span id="timer"></span>
+              
+            </div>
+           
+            <input type="button" id="Submit" class="btn solid" value="Submit">
             <script>
+           
+              let OTPText = document.querySelector('#myCanvas');
+              var ctx = OTPText.getContext("2d");
 
-              let userText = document.querySelector('#Captcha');
-              let submitButton = document.querySelector('#gen_otp');
-              let refreshButton = document.querySelector('#refresh');
+              ctx.font = "45px Roboto";
+              ctx.fillStyle = "#000";
+
+              let userText = document.querySelector('#OTP');
+              let Aadhar = document.querySelector('#Aadhar');
+              let submitButton = document.querySelector('#Submit');
+              let ResendButton = document.querySelector('#Resend');
               let popupCo = document.getElementById("A2");
-              let popupIn = document.getElementById("A3");
+              let popupIn = document.getElementById("A1");
+              let popupInv = document.getElementById("A4");
+              let popupWar = document.getElementById("A3");
+              // alphaNums contains the characters with which you want to create the OTP
+              let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
+              , 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c'
+              , 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 
+              't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+              let emptyArr = [];
+              // This loop generates a random string of 7 characters using alphaNums
+              // Further this string is displayed as a OTP
+              for (let i = 1; i <=7; i++) {
+                  emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+              }
+              var c = emptyArr.join('');
+              ctx.fillText(emptyArr.join(''),OTPText.width/4, OTPText.height/2);
 
               userText.addEventListener('keyup', function(e) {
-                  // Key Code Value of "Enter" Button is 13
-                  if (e.keyCode === 13) {
-                      if (userText.value === c) {
-                        popupCo.classList.add("open-Alert");
-                        setTimeout(() => {
-                            popupCo.classList.remove("open-Alert");
-                        },1000);
-                      } else {
-                        popupIn.classList.add("open-Alert");
-                        setTimeout(() => {
-                            popupIn.classList.remove("open-Alert");
-                        },1000);
-                      }
-                  }
+                if (e.keyCode === 13) {
+                  login();
+                }
               });
 
               submitButton.addEventListener('click', function() {
-                  if (userText.value === c) {
-                    popupCo.classList.add("open-Alert");
-                    setTimeout(() => {
-                            popupCo.classList.remove("open-Alert");
-                        },1000);
-                  } else {
-                    popupIn.classList.add("open-Alert");
-                    setTimeout(() => {
-                            popupIn.classList.remove("open-Alert");
-                        },1000);
-                  }
+                login();
               });
 
-              refreshButton.addEventListener('click', function() {
+              ResendButton.addEventListener('click', function() {
                   userText.value = "";
-                  let refreshArr = [];
-                  for (let j = 1; j <= 7; j++) {
-                      refreshArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
-                  }
-                  ctx.clearRect(0, 0, captchaText.width, captchaText.height);
-                  c = refreshArr.join('');
-                  ctx.fillText(refreshArr.join(''),captchaText.width/4, captchaText.height/2);
-                  output.innerHTML = "";
+                  let ResendArr = [];
+                  Resend(ResendArr);
               });
-
+              function Resend(ResendArr){
+                for (let j = 1; j <= 7; j++) {
+                      ResendArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+                  }
+                  ctx.clearRect(0, 0, OTPText.width, OTPText.height);
+                  c = ResendArr.join('');
+                  ctx.fillText(ResendArr.join(''),OTPText.width/4, OTPText.height/2);
+              }
+              function login(){
+                if (userText.value === c&&Aadhar.value ==="712979984763") {
+                  popupCo.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupCo.classList.remove("open-Alert");
+                  },1000);
+                } 
+                else if (userText.value === "" || Aadhar.value ==="") {
+                  popupInv.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupInv.classList.remove("open-Alert");
+                  },1000);
+                }
+                else if (userText.value !== c&&Aadhar.value==="712979984763"){
+                  popupWar.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupWar.classList.remove("open-Alert");
+                  },1000);
+                  let ResendArr = [];
+                  Resend(ResendArr);
+                }
+                else{
+                  popupIn.classList.add("open-Alert");
+                  setTimeout(() => {
+                      popupIn.classList.remove("open-Alert");
+                  },1000);
+                  let ResendArr = [];
+                  Resend(ResendArr,c,ctx);
+                }
+              }
             </script>
-            
+            <script>
+              document.getElementById('timer').innerHTML = 02 + ":" + 59;
+              startTimer();
+              function startTimer() {
+                var presentTime = document.getElementById('timer').innerHTML;
+                var timeArray = presentTime.split(/[:]+/);
+                var m = timeArray[0];
+                var s = checkSecond((timeArray[1] - 1));
+                if(s==59){m=m-1}
+                if(m<0){
+                  return
+                }
+                
+                document.getElementById('timer').innerHTML =
+                  m + ":" + s;
+                console.log(m)
+                setTimeout(startTimer, 1000);
+                
+              }
+
+              function checkSecond(sec) {
+                if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+                if (sec < 0) {sec = "59"};
+                return sec;
+              }
+            </script>
+            <script>
+              
+              const firebaseConfig = {
+              apiKey: "AIzaSyAdjhmQtmMpnDpinE_e9JqWR30xWFkHO-g",
+              authDomain: "onlinevotingsystem202.firebaseapp.com",
+              projectId: "onlinevotingsystem202",
+              storageBucket: "onlinevotingsystem202.appspot.com",
+              messagingSenderId: "411681836015",
+              appId: "1:411681836015:web:92548096532a48a11a441a",
+              measurementId: "G-W9GHLCJ1JW"};
+            </script>
+
           </form>
         </div>
 
       </div>
     </div>
     
-  </section>
 
 </body>
 
