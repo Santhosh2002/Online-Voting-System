@@ -46,13 +46,13 @@
                 <input type="number"id="OTP" placeholder="  Enter OTP">
                 
               </div>
-              <button id="Resend" ><i class="fa-solid fa-rotate-right"></i></button>
+              <button id="Resend" onclick="phoneAuth();" ><i class="fa-solid fa-rotate-right"></i></button>
             </div>
             <div class="timer">
              <p>Resend</p> <span id="timer"></span>
             </div>
-            
-            <input type="button" id="Submit" class="btn solid" value="Submit" onclick="Resend()">
+            <div id="recaptcha-container"></div>
+            <input type="button" id="Submit" class="btn solid" value="Submit" onclick="codeverify(); " >
             <script>
               let popupCo = document.getElementById("A2");
               let popupIn = document.getElementById("A1");
@@ -61,16 +61,16 @@
               let submitButton = document.querySelector('#Submit');
               let Username = document.getElementById("username");
               let Password = document.getElementById("password");
-              submitButton.addEventListener('click', function() {
-                
-              });
+              // submitButton.addEventListener('click', function() {
+              //   Resend();
+              // });
 
               
-              function Resend(){
+              // function Resend(){
                 
-                  popupCo.classList.add("open-Alert");
+                
               
-              }
+              // }
               function login(){
                 if (userText.value === c&&Aadhar.value ==="712979984763") {
                   popupCo.classList.add("open-Alert");
@@ -131,16 +131,62 @@
                 if (sec < 0) {sec = "59"};
                 return sec;
               }
-              let resend_on = document.getElementById("Resend");
-              resend_on.disable ="true";
+              // let resend_on = document.getElementById("Resend");
+              // resend_on.disable ="true";
               
-              if(document.getElementById('timer').innerHTML === 00 + ":" + 00){
-                resend_on.disable = "false";
+              // if(document.getElementById('timer').innerHTML === 00 + ":" + 00){
+              //   resend_on.disable = "false";
                 
 
-              }
+              // }
             </script>
             <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+            <script>
+              const firebaseConfig = {
+              apiKey: "AIzaSyAdjhmQtmMpnDpinE_e9JqWR30xWFkHO-g",
+              authDomain: "onlinevotingsystem202.firebaseapp.com",
+              projectId: "onlinevotingsystem202",
+              storageBucket: "onlinevotingsystem202.appspot.com",
+              messagingSenderId: "411681836015",
+              appId: "1:411681836015:web:92548096532a48a11a441a",
+              measurementId: "G-W9GHLCJ1JW"};
+              firebase.intializeApp(firebaseConfig);
+              
+            </script>
+            <script>
+              window.onload=function () {
+                render();
+              };
+              function render() {
+                  window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
+                  recaptchaVerifier.render();
+              }
+              function phoneAuth() {
+                  //get the number
+                  var number="+919515871972";
+                  //phone number authentication function of firebase
+                  //it takes two parameter first one is number,,,second one is recaptcha
+                  firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
+                      //s is in lowercase
+                      window.confirmationResult=confirmationResult;
+                      coderesult=confirmationResult;
+                      console.log(coderesult);
+                      alert("Message sent");
+                  }).catch(function (error) {
+                      alert(error.message);
+                  });
+              }
+              function codeverify() {
+                  var code=document.getElementById('OTP').value;
+                  coderesult.confirm(code).then(function (result) {
+                      alert("Successfully registered");
+                      var user=result.user;
+                      console.log(user);
+                  }).catch(function (error) {
+                      alert(error.message);
+                  });
+              }
+            </script>
             
 
           </form>
