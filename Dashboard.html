@@ -12,7 +12,7 @@
 
     
 
-    <div class="container">
+    <div class="container" id="blur">
         <div class="navigation">
             <ul>
                 <li>
@@ -56,7 +56,7 @@
 
 
         <!-- MAIN STARTS-->
-        <div class="main">
+        <div class="main" id="blur2">
 
             <!-- TOPBAR -->
             <div class="topbar">
@@ -81,7 +81,7 @@
 
             <!-- CARDS STARTS -->
             <div class="cardbox">
-                <div class="card" id="card_one">
+                <div class="card" onclick="popup_toggle()">
                     <div>
                        <div class="step_number"> Step 1 </div>
                        <div class="step_text">Select a Live Poll</div>
@@ -91,7 +91,7 @@
                         <span class="text">Show More</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="popup_toggle()">
                     <div>
                        <div class="step_number"> Step 2 </div>
                        <div class="step_text">Verify your Voter ID</div>
@@ -101,17 +101,17 @@
                         <span class="text">Show More</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="popup_toggle()">
                     <div>
                        <div class="step_number"> Step 3 </div>
-                       <div class="step_text">View Nominated Candidates </div>
+                       <div class="step_text">View the Candidate List</div>
                     </div>
                     <div class="iconbox">
                         <i class='bx bx-right-arrow-alt' ></i>
                         <span class="text">Show More</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" onclick="popup_toggle()">
                     <div>
                        <div class="step_number"> Step 4 </div>
                        <div class="step_text">Cast your Vote</div>
@@ -124,7 +124,6 @@
             </div>
             <!-- CARD ENDS -->
 
-           <!-- Initially here -->
             
 
             <!-- DETAILS -->
@@ -219,9 +218,38 @@
 
             </div>
 
-        </div>        
+        </div>  
+
+
+          
     </div>
 
+
+       <!-- POPSP STARTS -->
+       <div id="popup">
+        <div class="popup_icon">
+            <i class='bx bx-detail'></i>
+        </div>
+        <div class="popup_content">
+          <h2>Step 1</h2>
+          <div class="popup_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium nostrum provident sapiente placeat velit similique id perspiciatis suscipit, tenetur ex in, assumenda explicabo quos autem tempora maiores!</div>
+        </div>
+        <div class="dismiss" onclick="popup_toggle()">
+            <button class="dismiss_btn">Dismiss</button>
+        </div>
+    </div>
+    <div id="popup">
+        <div class="popup_icon">
+            <i class='bx bx-detail'></i>
+        </div>
+        <h2>Step 2</h2>
+        <div class="popup_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis non asperiores nihil, libero, quod error fugiat animi alias accusantium quaerat assumenda eveniet ipsum distinctio nemo unde illo laudantium molestiae qui eos minima debitis nostrum maxime ullam est? Porro, eveniet cupiditate.</div>
+        <div class="dismiss" onclick="popup_toggle()">
+            <button class="dismiss_btn">Dismiss</button>
+        </div>
+    </div>
+    <div id="overlay" onclick="popup_toggle()"></div>
+    <!-- POPUP ENDS --> 
 
     <!-- SCRIPT -->
     <script>
@@ -244,15 +272,19 @@
      item.addEventListener('mouseover',activeLink));
 
 
+    //  POPUP
+     function popup_toggle(){
+            
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('popup_active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('popup_active');
+            var overlay = document.getElementById('overlay');
+            overlay.classList.toggle('popup_active');   
+        }
+     function popup_text_toggle(){
 
-    // TRIAL
-    document.getElementById("card_one").addEventListener("click", function(){
-        document.getElementsByClassName("popup")[0].classList.add("active");
-    });
-
-    document.getElementById("dismiss").addEventListener("click", function(){
-        document.getElementsByClassName("popup")[0].classList.remove("active");
-    });
+     } 
 
 
     </script>
