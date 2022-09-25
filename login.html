@@ -160,9 +160,8 @@
                 }
               }
             </script>
-
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
             <script>
-              
               const firebaseConfig = {
               apiKey: "AIzaSyAdjhmQtmMpnDpinE_e9JqWR30xWFkHO-g",
               authDomain: "onlinevotingsystem202.firebaseapp.com",
@@ -172,11 +171,42 @@
               appId: "1:411681836015:web:92548096532a48a11a441a",
               measurementId: "G-W9GHLCJ1JW"};
               firebase.intializeApp(firebaseConfig);
-              function phoneAuth(){
-                var number = "+919515871972";
-                firebase.auth().signInWithPhoneNumber(number);
+              
             </script>
-
+            <!-- <script>
+              window.onload=function () {
+                render();
+              };
+              function render() {
+                  window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
+                  recaptchaVerifier.render();
+              }
+              function phoneAuth() {
+                  //get the number
+                  var number="+919515871972";
+                  //phone number authentication function of firebase
+                  //it takes two parameter first one is number,,,second one is recaptcha
+                  firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
+                      //s is in lowercase
+                      window.confirmationResult=confirmationResult;
+                      coderesult=confirmationResult;
+                      console.log(coderesult);
+                      alert("Message sent");
+                  }).catch(function (error) {
+                      alert(error.message);
+                  });
+              }
+              function codeverify() {
+                  var code=document.getElementById('OTP').value;
+                  coderesult.confirm(code).then(function (result) {
+                      alert("Successfully registered");
+                      var user=result.user;
+                      console.log(user);
+                  }).catch(function (error) {
+                      alert(error.message);
+                  });
+              }
+            </script> -->
           </form>
         </div>
 
