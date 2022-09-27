@@ -21,10 +21,9 @@
       <div class="alertPopup">
         <div class="alert" id="A1" >
           <strong>Unsuccess!</strong> Incorrect OTP.
-        </div>
-  
-        <div class="alert success" id="A2">
-          <strong>Success!</strong> OTP Verified Successfully.
+        </div> 
+        <div class="alert warning" id="A4" > 
+          <strong>Warning!</strong> Please fill the Fields.
         </div>
         
       </div>
@@ -37,6 +36,7 @@
           <form action="#" class="sign-in-form">
             <i class="fa-solid fa-circle-user"></i>
             <h2 class="title">Mobile Verification</h2>
+            
             <div class="mobile">
               <p>The OTP is sent to this number <input id="mobile_num" value="XXXXXXX972" readonly> . <br>Please don't share OTP with anyone.</p>
             </div>
@@ -46,68 +46,40 @@
                 <input type="number"id="OTP" placeholder="  Enter OTP">
                 
               </div>
-              <button id="Resend" onclick="phoneAuth();" ><i class="fa-solid fa-rotate-right"></i></button>
+              <button id="Resend"><i class="fa-solid fa-rotate-right"></i></button>
             </div>
             <div class="timer">
              <p>Resend</p> <span id="timer"></span>
             </div>
-            <div id="recaptcha-container"></div>
-            <input type="button" id="Submit" class="btn solid" value="Submit" onclick="codeverify(); " >
+            <input type="button" id="Submit" class="btn solid" value="Submit">
             <script>
-              let popupCo = document.getElementById("A2");
               let popupIn = document.getElementById("A1");
-              let popupInv = document.getElementById("A3");
-
+              let popupInv = document.getElementById("A4");
               let submitButton = document.querySelector('#Submit');
-              let Username = document.getElementById("username");
-              let Password = document.getElementById("password");
-              // submitButton.addEventListener('click', function() {
-              //   Resend();
-              // });
+              let otp_value = document.querySelector('#OTP');
 
-              
-              // function Resend(){
-                
-                
-              
-              // }
+              submitButton.addEventListener('click', function() {
+                login();
+              });
               function login(){
-                if (userText.value === c&&Aadhar.value ==="712979984763") {
-                  popupCo.classList.add("open-Alert");
-                  setTimeout(() => {
-                      popupCo.classList.remove("open-Alert");
-                  },1000);
-                } 
-                else if (userText.value === "" || Aadhar.value ==="") {
+                if (otp_value.value === "") {
                   popupInv.classList.add("open-Alert");
                   setTimeout(() => {
-                      popupInv.classList.remove("open-Alert");
+                    popupInv.classList.remove("open-Alert");
                   },1000);
-                }
-                else if (userText.value !== c&&Aadhar.value==="712979984763"){
-                  popupWar.classList.add("open-Alert");
-                  setTimeout(() => {
-                      popupWar.classList.remove("open-Alert");
-                  },1000);
-                  let ResendArr = [];
-                  Resend(ResendArr);
-                }
-                else{
-                  popupIn.classList.add("open-Alert");
-                  setTimeout(() => {
-                      popupIn.classList.remove("open-Alert");
-                  },1000);
-                  let ResendArr = [];
-                  Resend(ResendArr,c,ctx);
-                }
+                } 
+              else{
+                window.location.href = "Dashboard.html";
               }
+            }
+              
             </script>
             <script>
 
             </script>
             <script>
               
-              document.getElementById('timer').innerHTML = 00 + ":" + 09;
+              document.getElementById('timer').innerHTML = 02 + ":" + 59;
               startTimer();
               function startTimer() {
                 var presentTime = document.getElementById('timer').innerHTML;
@@ -118,77 +90,18 @@
                 if(m<0){
                   return
                 }
-                
-                document.getElementById('timer').innerHTML =
-                  m + ":" + s;
+                document.getElementById('timer').innerHTML = m + ":" + s;
                 console.log(m)
                 setTimeout(startTimer, 1000);
-                
               }
-
               function checkSecond(sec) {
-                if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+                if (sec < 10 && sec >= 0) {sec = "0" + sec};
                 if (sec < 0) {sec = "59"};
                 return sec;
               }
-              // let resend_on = document.getElementById("Resend");
-              // resend_on.disable ="true";
-              
-              // if(document.getElementById('timer').innerHTML === 00 + ":" + 00){
-              //   resend_on.disable = "false";
-                
 
-              // }
-            </script>
-            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
-            <script>
-              const firebaseConfig = {
-              apiKey: "AIzaSyAdjhmQtmMpnDpinE_e9JqWR30xWFkHO-g",
-              authDomain: "onlinevotingsystem202.firebaseapp.com",
-              projectId: "onlinevotingsystem202",
-              storageBucket: "onlinevotingsystem202.appspot.com",
-              messagingSenderId: "411681836015",
-              appId: "1:411681836015:web:92548096532a48a11a441a",
-              measurementId: "G-W9GHLCJ1JW"};
-              firebase.intializeApp(firebaseConfig);
-              
-            </script>
-            <script>
-              window.onload=function () {
-                render();
-              };
-              function render() {
-                  window.recaptchaVerifier=new firebase.auth.RecaptchaVerifier('recaptcha-container');
-                  recaptchaVerifier.render();
-              }
-              function phoneAuth() {
-                  //get the number
-                  var number="+919515871972";
-                  //phone number authentication function of firebase
-                  //it takes two parameter first one is number,,,second one is recaptcha
-                  firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function (confirmationResult) {
-                      //s is in lowercase
-                      window.confirmationResult=confirmationResult;
-                      coderesult=confirmationResult;
-                      console.log(coderesult);
-                      alert("Message sent");
-                  }).catch(function (error) {
-                      alert(error.message);
-                  });
-              }
-              function codeverify() {
-                  var code=document.getElementById('OTP').value;
-                  coderesult.confirm(code).then(function (result) {
-                      alert("Successfully registered");
-                      var user=result.user;
-                      console.log(user);
-                  }).catch(function (error) {
-                      alert(error.message);
-                  });
-              }
             </script>
             
-
           </form>
         </div>
 

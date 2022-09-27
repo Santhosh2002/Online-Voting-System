@@ -55,7 +55,7 @@
                         <input type="password" placeholder="Password" id ="password">
                     </div>
                     
-                    <input type="submit" id="Login" class="btn solid" value="Login" >
+                    <input type="button" id="Login" class="btn solid" value="Login" >
 
                     <script>
             
@@ -69,11 +69,12 @@
                         let Password = document.getElementById("password");
             
                         LoginButton.addEventListener('click', function() {
-                            if (Username.value == "admin@digitialindia.com" && Password.value =="admin@123") {
-                                popupCo.classList.add("open-Alert");
-                                setTimeout(() => {
-                                        popupCo.classList.remove("open-Alert");
-                                    },1000);
+                            login();
+                        });
+                        function login(){
+                            if (Username.value == "admin@digitalindia.com" && Password.value =="admin@123") {
+                                // setTimeout(() => {},2000);
+                               window.location.href = "Admin_dashboard.html";
                             } 
                             else if(Username.value == "" || Password.value ==""){
                                 popupInv.classList.add("open-Alert");
@@ -88,8 +89,8 @@
                                         popupIn.classList.remove("open-Alert");
                                     },1000);
                             }
-                        });
-            
+                        }
+                        
                         </script>
                 </form>
             </div>

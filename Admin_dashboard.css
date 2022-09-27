@@ -14,9 +14,9 @@
 	--dark: #000;
 	--green: #81D43A;
 	--light-green: #E3FFCB;
-	--blue: #1775F1;
-	--light-blue: #D0E4FF;
-	--dark-blue: #0C5FCD;
+	--black: #ff9c2c;
+	--light-black: #3a424c;
+	--dark-black: #09172a;
 	--red: #FC3B56;
 }
 
@@ -36,12 +36,6 @@ a {
 li {
 	list-style: none;
 }
-
-
-
-
-
-
 
 /* SIDEBAR */
 #sidebar {
@@ -67,12 +61,13 @@ li {
 	display: none;
 }
 #sidebar .brand {
-	font-size: 24px;
+	font-size: 16px;
+	white-space:nowrap;
 	display: flex;
 	align-items: center;
 	height: 64px;
 	font-weight: 700;
-	color: var(--blue);
+	color: var(--black);
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -80,6 +75,12 @@ li {
 	background: var(--light);
 	transition: all .3s ease;
 	padding: 0 6px;
+}
+#sidebar img{
+	height: 50px;
+    width: 50px;
+	margin-left: 5px;
+	color: #ff9c2c;
 }
 #sidebar .icon {
 	min-width: 48px;
@@ -122,7 +123,7 @@ li {
 }
 #sidebar .side-menu > li > a.active,
 #sidebar .side-menu > li > a.active:hover {
-	background: var(--blue);
+	background: var(--black);
 	color: var(--light);
 }
 #sidebar .divider {
@@ -150,7 +151,7 @@ li {
 	max-height: 1000px;
 }
 #sidebar .side-dropdown a:hover {
-	color: var(--blue);
+	color: var(--black);
 }
 #sidebar .ads {
 	width: 100%;
@@ -174,14 +175,14 @@ li {
 	align-items: center;
 	padding: 12px 0;
 	color: var(--light);
-	background: var(--blue);
+	background: var(--black);
 	transition: all .3s ease;
 	border-radius: 5px;
 	font-weight: 600;
 	margin-bottom: 12px;
 }
 #sidebar .btn-upgrade:hover {
-	background: var(--dark-blue);
+	background: var(--dark-black);
 }
 #sidebar .ads .wrapper p {
 	font-size: 12px;
@@ -243,7 +244,7 @@ nav .form-group input {
 	transition: all .3s ease;
 }
 nav .form-group input:focus {
-	box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+	box-shadow: 0 0 0 1px var(--black), 0 0 0 4px var(--light-black);
 }
 nav .form-group .icon {
 	position: absolute;
@@ -344,7 +345,7 @@ main .breadcrumbs li a {
 	font-size: 14px;
 }
 main .breadcrumbs li a {
-	color: var(--blue);
+	color: var(--black);
 }
 main .breadcrumbs li a.active,
 main .breadcrumbs li.divider {
@@ -399,7 +400,7 @@ main .card .progress::before {
 	top: 0;
 	left: 0;
 	height: 100%;
-	background: var(--blue);
+	background: var(--black);
 	width: var(--value);
 }
 main .card .label {
@@ -495,8 +496,8 @@ main .chat-box .day span {
 	display: inline-block;
 	padding: 6px 12px;
 	border-radius: 20px;
-	background: var(--light-blue);
-	color: var(--blue);
+	background: var(--light-black);
+	color: var(--black);
 	font-size: 12px;
 	font-weight: 600;
 }
@@ -530,7 +531,7 @@ main .chat-box .chat p {
 }
 main .chat-box .msg:not(.me) .chat p {
 	border-radius: 0 5px 5px 5px;
-	background: var(--blue);
+	background: var(--black);
 	color: var(--light);
 }
 main .chat-box .msg.me {
@@ -562,11 +563,11 @@ main .form-group input {
 	width: 100%;
 }
 main .form-group input:focus {
-	box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+	box-shadow: 0 0 0 1px var(--black), 0 0 0 4px var(--light-black);
 }
 main .btn-send {
 	padding: 0 16px;
-	background: var(--blue);
+	background: var(--black);
 	border-radius: 5px;
 	color: var(--light);
 	cursor: pointer;
@@ -574,7 +575,7 @@ main .btn-send {
 	transition: all .3s ease;
 }
 main .btn-send:hover {
-	background: var(--dark-blue);
+	background: var(--dark-black);
 }
 /* MAIN */
 /* CONTENT */
