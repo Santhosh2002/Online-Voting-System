@@ -683,7 +683,7 @@ body{
     opacity: 0;
     text-align: center;
     transition: 0.5s;
-    z-index: 10001;
+    z-index: 100010;
 
   }
 
@@ -766,8 +766,222 @@ body{
 
   /* TRIAL */
 
+    .text-box {
+      text-align: center;
+    }
   
+    .text-box .graph {
+      width: 85%;
+      padding: 5px;
+      margin-left: 3.5%;
+      border-radius: 20px;
+      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    }
+  
+    .text-box .Res {
+      position: relative;
+      width: 88%;
+      padding: 20px;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 40px;
+      margin-left: 2%;
+  
+    }
+  
+    .text-box .candidates .card {
+      position: relative;
+      background: var(--white);
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  
+    .card .imgBox {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  
+    .card .imgBox img {
+      width: 50px;
+      height: 50px;
+    }
 
 
+.container .details1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
 
+.container .main_header table {
+  color: #333;
+  font-weight: 600;
+  font-size: 2em;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 20px 50px 0 0;
+
+}
+
+.container .main_header table td {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 3px;
+  word-break: break-all;
+}
+
+
+.container .tab {
+  position: relative;
+  background: rgba(255, 255, 255, 0.809);
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 0 20px 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+
+}
+
+.container .tab input {
+  appearance: none;
+
+}
+
+.container .tab label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container .tab label::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+}
+
+.container .tab:hover label::after {
+  color: #333;
+}
+
+.container .tab input:checked~label::after {
+  transform: rotate(135deg);
+  color: #fff;
+}
+
+.container .tab table {
+  font-weight: 500;
+  font-size: 1em;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 0 50px 0 0;
+  z-index: 10;
+}
+
+
+.container .tab table td {
+  padding: 4px;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 3px;
+  word-break: break-word;
+}
+
+.container .tab table.ongoing td {
+  background: linear-gradient(135deg, #70f570, #49c628);
+}
+
+.container .tab table.offline td {
+  background: linear-gradient(135deg, #969696, #606060);
+}
+
+.container .tab table.ended td {
+  background: linear-gradient(135deg, #3c8ce7, #03eaff);
+}
+
+.container .tab input:checked~label table td {
+  color: #333;
+  background: #fff;
+}
+
+.container .tab input:checked~label h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 8em;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.container .tab label.ongoing h2 {
+  background: linear-gradient(135deg, #70f570, #49c628);
+}
+
+.container .tab label.ended h2 {
+  background: linear-gradient(135deg, #3c8ce7, #03eaff);
+}
+
+.container .tab label.offline h2 {
+  background: linear-gradient(135deg, #b1b1b1, #727272);
+}
+
+
+.container .tab label h3 {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  /* FOR WHAT ? */
+  z-index: 10;
+}
+
+.container .tab input:checked~label h3 {
+  background: #fff;
+  padding: 2px 10px;
+  color: #333;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container .tab .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 2.5s;
+
+}
+
+.container .tab input:checked~.content {
+  max-height: 100vh;
+}
+
+.container .tab .content p {
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  /* Again why??? */
+  z-index: 10;
+}
+
+.container .tab input:checked~.content p {
+  color: #fff;
+}
   

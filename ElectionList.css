@@ -232,7 +232,7 @@ body{
 
 
 
-.container .details{
+.container .details1{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -265,9 +265,11 @@ body{
 
 .container .tab{
     position: relative;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.809);
+    margin-bottom: 8px;
+    border-radius: 8px;
     padding: 0 20px 20px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 7px 25px rgba(0, 0, 0, 0.205);
     overflow: hidden;
 
 }
@@ -300,7 +302,6 @@ body{
     transform: rotate(135deg);
     color: #fff;
 }
-
 
 .container .tab table{
   font-weight: 500;

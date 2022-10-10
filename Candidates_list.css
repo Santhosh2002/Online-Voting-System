@@ -248,6 +248,7 @@ body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
+
 /* 
 .Home .text-box .signin-signup {
     position: relative;
@@ -389,6 +390,7 @@ form {
     }
 
 }
+
 /* .text-box .wrap .holder{
     font: 18px;
     vertical-align: baseline;
@@ -444,45 +446,32 @@ form {
     padding: .15em;
     font-size: .75em;
 } */
-.text-box{
-    text-align: center;
+.text-box .graph {
+    width: 70%;
 }
-.text-box .graph{
-    width: 85%;
-    padding: 5px;
-    margin-left: 3.5%;
-    border-radius: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-}
+
 .text-box .Res {
     position: relative;
-    width: 88%;
+    width: 100%;
     padding: 20px;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-gap: 40px;
-    margin-left: 2%;
-    
+    grid-gap: 30px;
 }
 
-.text-box .candidates .card {
+.candidates .card {
     position: relative;
     background: var(--white);
-    padding: 35px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
 }
-.card .imgBox{
+
+.card .imgBox {
     position: relative;
     display: flex;
     justify-content: space-between;
+    white-space: 20px;
     flex-direction: row;
-}
-.card .imgBox img{
-    width: 50px;
-    height: 50px;
 }
