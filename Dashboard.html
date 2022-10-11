@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" id="Nom_a">
+                    <a href="#" id="Nom_a"onclick="openTab('Cand');">
                         <i class='bx bx-trophy'></i>
                         <span class="Title">Nomines List</span>
                     </a>
@@ -549,7 +549,142 @@
             </div>
         </div>
     </div>
-
+    <div class="main" id="Cand"style="display: none;">
+    
+        <!-- TOPBAR -->
+        <div class="topbar">
+    
+            <!-- TOGGLE BUTTON STARTS-->
+            <div class="toggle">
+                <i class='bx bx-menu'></i>
+                <div class="dashboard">Results</div>
+            </div>
+            <!-- TOGGLE BUTTON ENDS -->
+    
+    
+            <!-- PTOFILE STARTS -->
+            <div class="user">
+                <img src="profile.jpg" alt="" class="">
+                <span class="profile_name">Profile</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+            <!-- PROFILE ENDS -->
+    
+        </div>
+        <!-- TOPBAR ENDS -->
+    
+    
+        <!-- FORMS STARTS -->
+        <div class="Home">
+            <div class="text-box">
+                <h1 id="title">Nomines List</h1>
+    
+                <div class="Res">
+                    <div class="candidates">
+                        <div class="card C1">
+                            <div class="imgBox">
+                                <img src="./Images/male.png" />
+                                <h2>Candidate 1</h2>
+                                <p>Party : BJP</p>
+                            </div>
+                        </div>
+                        <div class="card C1">
+                            <div class="imgBox">
+                                <img src="./Images/male.png" />
+                                <h2>Candidate 2</h2>
+                                <p>Party : INC</p>
+    
+                            </div>
+                        </div>
+                        <div class="card C1">
+                            <div class="imgBox">
+                                <img src="./Images/male.png" />
+                                <h2>Candidate 3</h2>
+                                <p>Party : NPP</p>
+    
+                            </div>
+                        </div>
+                        <div class="card C1">
+                            <div class="imgBox">
+                                <img src="./Images/male.png" />
+                                <h2>Candidate 4</h2>
+                                <p>Party : NCP</p>
+    
+                            </div>
+                        </div>
+                        <div class="card C1">
+                            <div class="imgBox">
+                                <img src="./Images/female.png" />
+                                <h2>Candidate 5</h2>
+                                <p>Party : CPI</p>
+    
+                            </div>
+                        </div>
+                        <div class="card C1">
+                            <div class="imgBox">
+                                <img src="./Images/female.png" />
+                                <h2>Candidate 6</h2>
+                                <p>Party : BSP</p>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candidates_details">
+                        <div class="card C1">
+                            <h1>Qualifications</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Illum unde sequi labore placeat repudiandae vitae iusto
+                                excepturi sapiente a vel!
+                            </p>
+                        </div>
+                        <div class="card C1">
+                            <h1>Qualifications</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Illum unde sequi labore placeat repudiandae vitae iusto
+                                excepturi sapiente a vel!
+                            </p>
+                        </div>
+                        <div class="card C1">
+                            <h1>Qualifications</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Illum unde sequi labore placeat repudiandae vitae iusto
+                                excepturi sapiente a vel!
+                            </p>
+                        </div>
+                        <div class="card C1">
+                            <h1>Qualifications</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Illum unde sequi labore placeat repudiandae vitae iusto
+                                excepturi sapiente a vel!
+                            </p>
+                        </div>
+                        <div class="card C1">
+                            <h1>Qualifications</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Illum unde sequi labore placeat repudiandae vitae iusto
+                                excepturi sapiente a vel!
+                            </p>
+                        </div>
+                        <div class="card C1">
+                            <h1>Qualifications</h1>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Illum unde sequi labore placeat repudiandae vitae iusto
+                                excepturi sapiente a vel!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+    </div>
     <!-- SCRIPT -->
     <script>
         // bar.js
@@ -587,14 +722,6 @@
         chart.appendTo(".graph");
     </script>
     <script>
-        document.getElementById('#Elec_a').style.pointerEvents = "none";
-        document.getElementById('#Elec_a').style.cursor = "default";
-        document.getElementById('#poll_a').style.pointerEvents = "none";
-        document.getElementById('#poll_a').style.cursor = "default";
-        document.getElementById('#Nom_a').style.pointerEvents = "none";
-        document.getElementById('#Nom_a').style.cursor = "default";
-        document.getElementById('#Res_a').style.pointerEvents = "none";
-        document.getElementById('#Res_a').style.cursor = "default";
         
         let captchaText = document.querySelector('#myCanvas');
         var ctx = captchaText.getContext("2d");
@@ -681,16 +808,7 @@
             }
         }
 
-        function enable(){
-            document.getElementById('#Elec_a').style.pointerEvents = "auto";
-            document.getElementById('#Elec_a').style.cursor = "pointer";
-            document.getElementById('#poll_a').style.pointerEvents = "auto";
-            document.getElementById('#poll_a').style.cursor = "pointer";
-            document.getElementById('#Nom_a').style.pointerEvents = "auto";
-            document.getElementById('#Nom_a').style.cursor = "pointer";
-            document.getElementById('#Res_a').style.pointerEvents = "auto";
-            document.getElementById('#Res_a').style.cursor = "pointer";
-        }   
+        
     </script>
     <script>
      let toggle = document.querySelector('.toggle');

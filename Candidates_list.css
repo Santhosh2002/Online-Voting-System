@@ -238,6 +238,7 @@ body {
     width: calc(100% - 50px);
     left: 30px;
     right: 20px;
+
 }
 
 .Home .text-box {
@@ -248,7 +249,11 @@ body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
+.Home .text-box #title{
+     font-size: 50px;
+     margin-bottom: 20px;
 
+}
 /* 
 .Home .text-box .signin-signup {
     position: relative;
@@ -450,7 +455,7 @@ form {
     text-align: center;
 }
 
-.text-box .Res {
+.Res {
     position: relative;
     width: 88%;
     padding: 20px;
@@ -463,7 +468,7 @@ form {
 
 }
 
-.text-box .candidates .card {
+.candidates .card {
     position: relative;
     background: var(--white);
     width: 300px;
@@ -474,9 +479,10 @@ form {
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
-.text-box .candidates_details .card {
+
+.candidates_details .card {
     position: relative;
     background: var(--white);
     width: 900px;
@@ -488,7 +494,7 @@ form {
     font-size: 18px;
     font-weight: 600;
     margin-left: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .imgBox {
     position: relative;
