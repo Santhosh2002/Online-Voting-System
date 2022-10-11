@@ -446,11 +446,60 @@ form {
     padding: .15em;
     font-size: .75em;
 } */
+.text-box {
+    text-align: center;
+}
 
+.text-box .Res {
+    position: relative;
+    width: 88%;
+    padding: 20px;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 80px; */
+    display: flex;
+    flex-direction: row;
+    margin-left: 2%;
+
+}
+
+.text-box .candidates .card {
+    position: relative;
+    background: var(--white);
+    width: 300px;
+    height: 300px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.text-box .candidates_details .card {
+    position: relative;
+    background: var(--white);
+    width: 900px;
+    height: 300px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+.imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-80px);
+    z-index: 99;
+}
 
 img {
-    width: 50px;
-    height: 50px;
+    width: 80%;
     margin-left: 10%;
     align-items: center;
     border-radius: 50%;
