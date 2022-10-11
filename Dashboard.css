@@ -334,7 +334,7 @@ body{
     color: var(--orange);
   }
 
-  .btn{
+  .btn1{
     position: relative;
     padding: 5px 10px;
     background: var(--orange);
@@ -343,7 +343,7 @@ body{
     border-radius: 6px;
   }
 
-  .btn:hover{
+  .btn1:hover{
     box-shadow: 0 0 7px 2.5px rgba(0, 0, 0, 0.1);
   }
 
@@ -683,7 +683,7 @@ body{
     opacity: 0;
     text-align: center;
     transition: 0.5s;
-    z-index: 100010;
+    z-index: 10001;
 
   }
 
@@ -984,4 +984,100 @@ body{
 .container .tab input:checked~.content p {
   color: #fff;
 }
-  
+
+.captcha-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+
+}
+
+canvas {
+  width: 200px;
+  height: 70px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  background-color: rgba(174, 188, 199, 0.808);
+}
+
+#refresh {
+  width: 100px;
+  margin-left: 50px;
+}
+
+.alert {
+
+  position: absolute;
+  padding: 20px;
+  width: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 180px;
+  text-align: center;
+  background-color: #f44336;
+  color: white;
+  transition: opacity 0.6s;
+
+  transform: translate(71%, 5%);
+  border-radius: 10px;
+  scale: 1;
+  visibility: hidden;
+  transition: transform 0.4s;
+  z-index: 10000;
+
+}
+
+.open-Alert {
+  visibility: visible;
+  transform: translate(71%, 5%) scale(1);
+}
+
+.alert.success {
+  background-color: #04AA6D;
+}
+
+.alert.info {
+  background-color: #2196F3;
+}
+
+.alert.warning {
+  background-color: #ff9800;
+}
+#refresh {
+  width: 100px;
+  margin-left: 50px;
+}
+.btn {
+  width: 150px;
+  height: 49px;
+  top: 40%;
+  outline: none;
+  border: none;
+  border-radius: 48px;
+  background-color: #4590b1;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  flex-direction: row;
+  margin: 10px 0;
+  margin-top: 15px;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #138808;
+}
+.signin-signup {
+  position: relative;
+  height: 40%;
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  border-radius: 25px;
+  background-color: rgba(233, 233, 233, 0.393);
+  transform: translate(-50% -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
