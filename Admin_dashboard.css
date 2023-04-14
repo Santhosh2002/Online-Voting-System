@@ -116,7 +116,8 @@ li {
 	white-space: nowrap;
 }
 #sidebar .side-menu > li > a:hover {
-	background: var(--grey);
+	background: var(--black);
+	color: #fff;
 }
 #sidebar .side-menu > li > a.active .icon-right {
 	transform: rotateZ(90deg);
@@ -182,7 +183,7 @@ li {
 	margin-bottom: 12px;
 }
 #sidebar .btn-upgrade:hover {
-	background: var(--dark-black);
+	background: var(--black);
 }
 #sidebar .ads .wrapper p {
 	font-size: 12px;
@@ -192,6 +193,7 @@ li {
 #sidebar .ads .wrapper p span {
 	font-weight: 700;
 }
+
 /* SIDEBAR */
 
 
